@@ -358,7 +358,7 @@ class StringKey(TemplateKey):
             self._filter_regex_u = re.compile(r"[\W_0-9]", re.UNICODE)
         # Add custom pattern
         elif self._filter_by == "custom":
-            self._filter_regex_u = re.compile(r"[\W0-9]", re.UNICODE)
+            self._filter_regex_u = re.compile(r"[\W]", re.UNICODE)
 
         elif self._filter_by is not None:
             # filter_by is a regex
